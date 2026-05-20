@@ -69,7 +69,7 @@ a {
 
 .brand {
   gap: 12px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: 0;
 }
@@ -265,55 +265,6 @@ h1 {
   color: var(--accent-2);
 }
 
-.signal-grid {
-  position: absolute;
-  z-index: 2;
-  right: 28px;
-  bottom: 26px;
-  left: auto;
-  display: grid;
-  width: min(72%, 470px);
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-
-.signal-grid span {
-  position: relative;
-  height: 58px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background:
-    linear-gradient(180deg, rgba(100, 210, 255, 0.2), transparent),
-    rgba(255, 255, 255, 0.035);
-}
-
-.signal-grid span::before,
-.signal-grid span::after {
-  position: absolute;
-  left: 16px;
-  content: "";
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.22);
-}
-
-.signal-grid span::before {
-  top: 18px;
-  width: 46%;
-  height: 6px;
-}
-
-.signal-grid span::after {
-  top: 32px;
-  width: 30%;
-  height: 5px;
-}
-
-.signal-grid span:nth-child(2n) {
-  background:
-    linear-gradient(180deg, rgba(124, 255, 178, 0.16), transparent),
-    rgba(255, 255, 255, 0.035);
-}
-
 .section {
   padding: 88px 0;
   border-top: 1px solid var(--line);
@@ -442,9 +393,9 @@ h1 {
 
 .site-footer a {
   color: var(--text);
-  font-size: clamp(20px, 2.4vw, 30px);
-  font-weight: 700;
-  line-height: 1.15;
+  font-size: clamp(16px, 1.45vw, 20px);
+  font-weight: 650;
+  line-height: 1.35;
 }
 
 .company-name {
@@ -523,14 +474,6 @@ h1 {
 
   .console-panel {
     min-height: 330px;
-  }
-
-  .signal-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .signal-grid span {
-    height: 48px;
   }
 
   .focus-grid {
