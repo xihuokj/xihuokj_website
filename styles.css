@@ -200,7 +200,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.24;
+  opacity: 0.48;
 }
 
 .console-panel::before {
@@ -272,18 +272,40 @@ h1 {
   bottom: 26px;
   left: auto;
   display: grid;
-  width: min(78%, 500px);
+  width: min(72%, 470px);
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
 .signal-grid span {
-  height: 64px;
+  position: relative;
+  height: 58px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background:
     linear-gradient(180deg, rgba(100, 210, 255, 0.2), transparent),
     rgba(255, 255, 255, 0.035);
+}
+
+.signal-grid span::before,
+.signal-grid span::after {
+  position: absolute;
+  left: 16px;
+  content: "";
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.signal-grid span::before {
+  top: 18px;
+  width: 46%;
+  height: 6px;
+}
+
+.signal-grid span::after {
+  top: 32px;
+  width: 30%;
+  height: 5px;
 }
 
 .signal-grid span:nth-child(2n) {
