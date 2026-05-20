@@ -42,7 +42,7 @@ a {
 }
 
 .page-shell {
-  width: min(1180px, calc(100% - 40px));
+  width: min(1280px, calc(100% - 48px));
   margin: 0 auto;
 }
 
@@ -68,16 +68,19 @@ a {
 }
 
 .brand {
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 650;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
 .brand-mark {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  box-shadow: 0 0 0 1px rgba(100, 210, 255, 0.08);
 }
 
 .nav-links {
@@ -103,15 +106,15 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.03fr) minmax(360px, 0.72fr);
-  gap: 48px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 0.84fr);
+  gap: 72px;
   align-items: center;
-  min-height: calc(100vh - 72px);
-  padding: 72px 0 96px;
+  min-height: min(760px, calc(100vh - 72px));
+  padding: 64px 0 84px;
 }
 
 .hero-copy {
-  max-width: 790px;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -131,18 +134,18 @@ p {
 }
 
 h1 {
-  max-width: 920px;
-  margin-bottom: 24px;
-  font-size: clamp(48px, 7vw, 92px);
-  line-height: 0.94;
+  max-width: 760px;
+  margin-bottom: 22px;
+  font-size: clamp(48px, 5.9vw, 78px);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
 .intro {
-  max-width: 680px;
+  max-width: 620px;
   margin-bottom: 34px;
   color: var(--muted);
-  font-size: clamp(18px, 2vw, 22px);
+  font-size: clamp(17px, 1.7vw, 20px);
   line-height: 1.55;
 }
 
@@ -182,7 +185,7 @@ h1 {
 .console-panel {
   position: relative;
   overflow: hidden;
-  min-height: 440px;
+  min-height: 420px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
@@ -197,7 +200,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.68;
+  opacity: 0.24;
 }
 
 .console-panel::before {
@@ -215,7 +218,9 @@ h1 {
   position: absolute;
   inset: 0;
   content: "";
-  background: linear-gradient(180deg, rgba(5, 5, 5, 0.12), rgba(5, 5, 5, 0.62));
+  background:
+    radial-gradient(circle at 74% 48%, rgba(100, 210, 255, 0.12), transparent 18rem),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.06), rgba(5, 5, 5, 0.72));
 }
 
 .panel-bar {
@@ -237,9 +242,15 @@ h1 {
 .terminal-lines {
   position: relative;
   z-index: 2;
-  padding: 24px 24px 0;
+  max-width: 390px;
+  margin: 26px 28px 0;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(5, 5, 6, 0.52);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   font-size: 13px;
+  backdrop-filter: blur(8px);
 }
 
 .terminal-lines p {
@@ -257,16 +268,17 @@ h1 {
 .signal-grid {
   position: absolute;
   z-index: 2;
-  right: 24px;
-  bottom: 24px;
-  left: 24px;
+  right: 28px;
+  bottom: 26px;
+  left: auto;
   display: grid;
+  width: min(78%, 500px);
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
 
 .signal-grid span {
-  height: 78px;
+  height: 64px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background:
@@ -296,8 +308,8 @@ h1 {
 .section-heading h2,
 .workflow-band h2 {
   margin-bottom: 0;
-  font-size: clamp(32px, 4.8vw, 58px);
-  line-height: 1;
+  font-size: clamp(32px, 4.2vw, 52px);
+  line-height: 1.04;
   letter-spacing: 0;
 }
 
@@ -310,7 +322,7 @@ h1 {
 }
 
 .focus-item {
-  min-height: 256px;
+  min-height: 330px;
   padding: 24px;
   border-right: 1px solid var(--line);
 }
@@ -398,7 +410,7 @@ h1 {
 
 .site-footer {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 24px;
   padding: 42px 0 54px;
@@ -408,13 +420,13 @@ h1 {
 
 .site-footer a {
   color: var(--text);
-  font-size: clamp(24px, 4vw, 46px);
-  font-weight: 750;
-  line-height: 1;
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
 .company-name {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   color: var(--subtle);
   font-size: 13px;
   line-height: 1.5;
